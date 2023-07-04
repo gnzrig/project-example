@@ -5,11 +5,15 @@ import styles from "@/styles/Home.module.css";
 import React, { useState } from "react";
 import Login from "./login";
 import Layout from "./components/Layout/page";
+import Pagination from "./components/Pagination/page";
+import Paginate from "./components/Paginate/page";
+import FetchData from "./components/Pagination/fetchData";
+import CustomPaginationActionsTable from "./components/Pagination/table";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [isAuth, setIsAuth] = useState<boolean>(false);
+  const [isAuth, setIsAuth] = useState<boolean>(true);
   return (
     <>
       <Head>
@@ -18,6 +22,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Pagination />
+      <Paginate />
+      <FetchData />
+      <CustomPaginationActionsTable />
       {isAuth ? <Layout /> : <Login />}
     </>
   );

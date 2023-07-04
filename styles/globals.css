@@ -8,3 +8,14 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  font-weight: 900;
+}
